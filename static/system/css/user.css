@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#content {
+    flex: 1;
+}
+#footer {
+    background-color: rgb(249, 249, 249);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

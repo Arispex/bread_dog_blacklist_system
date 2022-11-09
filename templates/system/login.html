@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>登入</title>
+        <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+        <link rel="stylesheet" href="/static/system/css/login.css" type="text/css">
+        <link rel="stylesheet" href="/static/system/css/user.css" type="text/css">
+    </head>
+    <body>
+        <div id="content">
+            <script src="/static/system/js/mdui.min.js"></script>
+            <script src="/static/system/js/jquery-3.6.1.min.js"></script>
+            <div class="mdui-container mdui-center mdui-text-center title">
+                <div class="mdui-row main"><h1>云黑系统</h1></div>
+                <div class="mdui-row mdui-text-color-black-icon sub"><h2>「Let's Go」</h2></div>
+            </div>
+            <form class="mdui-container mdui-center" style="width: 40%">
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-row email">
+                    <i class="mdui-icon material-icons">account_circle</i>
+                    <label class="mdui-textfield-label">用户名</label>
+                    <input class="mdui-textfield-input" type="text" name="username" id="username" required/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label password mdui-row">
+                    <i class="mdui-icon material-icons">lock</i>
+                    <label class="mdui-textfield-label">Password</label>
+                    <input class="mdui-textfield-input" type="password" name="password" id="password"
+                           pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
+                    <div class="mdui-textfield-error">密码至少 6 位，且包含大小写字母</div>
+                    <div class="mdui-textfield-helper">请输入至少 6 位，且包含大小写字母的密码</div>
+                </div>
+                <button class="mdui-row mdui-center mdui-btn mdui-btn-raised mdui-color-pink mdui-ripple mdui-m-t-4"
+                        id="submit">登入
+                </button>
+            </form>
+        </div>
+        <footer id="footer"></footer>
+        <script src="/static/system/js/login.js"></script>
+    </body>
+</html>

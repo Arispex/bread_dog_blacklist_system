@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>仪表盘</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+        <link rel="stylesheet" href="/static/system/css/user.css" type="text/css">
+    </head>
+    <body>
+        <script src="/static/system/js/mdui.min.js"></script>
+        <script src="/static/system/js/jquery-3.6.1.min.js"></script>
+        {#工具栏#}
+        <div class="mdui-toolbar mdui-color-pink">
+            <a href="javascript:" class="mdui-btn mdui-btn-icon" id="menu">
+                <i class="mdui-icon material-icons">menu</i>
+            </a>
+            <span class="mdui-typo-title">{{ title }}</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:" class="mdui-btn mdui-btn-icon" id="account-btn">
+                <i class="mdui-icon material-icons">account_circle</i>
+            </a>
+            <ul class="mdui-menu mdui-text-center" id="account-menu">
+                <li class="mdui-menu-item">
+                    当前账号：{{ username }}
+                </li>
+                <li class="mdui-menu-item">
+                    <a id="copy-token">复制token</a>
+                </li>
+                <li class="mdui-menu-item">
+                    <a href="javascript:" id="logout-btn">登出</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mdui-drawer mdui-drawer-close" id="drawer">
+            <div class="mdui-list">
+                <div class="mdui-list-item">
+                    <div class="mdui-list-item-content mdui-ripple"><a href="/user/panel/">仪表盘</a></div>
+                </div>
+            </div>
+            <div class="mdui-list">
+                <div class="mdui-list-item">
+                    <div class="mdui-list-item-content mdui-ripple"><a href="/user/my-bans">我的封禁</a></div>
+                </div>
+            </div>
+            <div class="mdui-list">
+                <div class="mdui-list-item">
+                    <div class="mdui-list-item-content mdui-ripple"><a href="/user/all-bans/">全部封禁</a></div>
+                </div>
+            </div>
+            <div class="mdui-list">
+                <div class="mdui-list-item">
+                    <div class="mdui-list-item-content mdui-ripple"><a href="/user/add-ban/">添加封禁</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="content"></div>
+        <footer id="footer"></footer>
+        <script src="/static/system/js/user.js"></script>
+    </body>
+</html>

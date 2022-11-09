@@ -1,0 +1,30 @@
+<script src="/static/system/js/jquery-3.6.1.min.js"></script>
+<div class="mdui-table-fluid">
+    <table class="mdui-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>操作者</th>
+                <th>封禁QQ</th>
+                <th>原因</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="bans">
+            {% for ban in bans %}
+                <tr>
+                    <td>{{ ban.id }}</td>
+                    <td>{{ ban.operator }}</td>
+                    <td>{{ ban.QQ }}</td>
+                    <td>{{ ban.reason }}</td>
+                    <td>{{ ban.time }}</td>
+                    <td>
+                        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink delete-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="/static/system/js/my-bans.js"></script>

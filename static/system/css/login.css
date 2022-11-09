@@ -1,0 +1,11 @@
+.title .main {
+    font-weight: 50;
+    font-style: italic;
+    font-size: 40px;
+}
+.title .sub {
+    font-size: 15px;
+}
+/*.email, .password {*/
+/*    width: 40vw;*/
+/*}*/
