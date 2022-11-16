@@ -28,11 +28,38 @@
                     <a id="copy-token">复制token</a>
                 </li>
                 <li class="mdui-menu-item">
+                    <a id="change-password">修改密码</a>
+                </li>
+                <li class="mdui-menu-item">
                     <a href="javascript:" id="logout-btn">登出</a>
                 </li>
             </ul>
         </div>
-
+        {#        修改密码对话框#}
+        <div class="mdui-dialog" id="change-password-dialog">
+            <div class="mdui-dialog-title">修改密码</div>
+            <div class="mdui-dialog-content">
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-row">
+                    <i class="mdui-icon material-icons">lock</i>
+                    <label class="mdui-textfield-label">旧密码</label>
+                    <input class="mdui-textfield-input" type="text" name="old-password" id="old-password" required/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-row">
+                    <i class="mdui-icon material-icons">lock</i>
+                    <label class="mdui-textfield-label">新密码</label>
+                    <input class="mdui-textfield-input" type="text" name="new-password" id="new-password" required/>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-row">
+                    <i class="mdui-icon material-icons">lock</i>
+                    <label class="mdui-textfield-label">确认密码</label>
+                    <input class="mdui-textfield-input" type="text" name="confirm-password" id="confirm-password" required/>
+                </div>
+            </div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" id="change-password-dialog-cancel">返回</button>
+                <button class="mdui-btn mdui-ripple" id="change-password-dialog-confirm">确认</button>
+            </div>
+        </div>
         <div class="mdui-drawer mdui-drawer-close" id="drawer">
             <div class="mdui-list">
                 <div class="mdui-list-item">

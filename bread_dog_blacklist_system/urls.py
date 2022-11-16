@@ -33,5 +33,6 @@ urlpatterns = [
     path('user/add-ban/content/', system.views.add_ban),
     path('blacklist/', system.views.blacklist),
     path('copyright/', system.views.copyright),
-    path('user/info/', system.views.get_info)
+    path('user/info/', system.views.get_info),
+    path('user/change-password/', system.views.change_password)
 ]

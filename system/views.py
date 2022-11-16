@@ -112,6 +112,32 @@ def get_info(request):
     }))
 
 
+@login_required
+@csrf_exempt
+def change_password(request):
+    if request.method == "POST":
+        old_password = request.POST["old_password"]
+        new_password = request.POST["new_password"]
+        if request.user.check_password(old_password):
+            request.user.set_password(new_password)
+            request.user.save()
+            auth.logout(request)
+            return HttpResponse(json.dumps({
+                "status": 200,
+                "msg": "修改成功"
+            }))
+        else:
+            return HttpResponse(json.dumps({
+                "status": 403,
+                "msg": "原密码错误"
+            }))
+    else:
+        return HttpResponse(json.dumps({
+            "status": 403,
+            "msg": "请求方式错误"
+        }))
+
+
 @csrf_exempt
 def blacklist(request):
     # 黑名单增删查改 API，遵循 REST 风格
